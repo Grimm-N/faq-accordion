@@ -1,0 +1,116 @@
+@font-face {
+    font-family: 'WorkSans'; 
+    src: url('fonts/WorkSans-VariableFont_wght.ttf') format('truetype');
+}
+
+:root {
+    --accordion-color: #fff;
+    --body-color: #f9eeff;
+    --text-color: #301534;
+    --shadow-color: rgba(48, 21, 52, 0.15);
+    --hover-color: #AD28EB;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5;
+    font-family: 'WorkSans'; 
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text-color);
+    background-color: var(--body-color);
+    background-image: url(images/background-pattern-desktop.svg);
+    background-size:  auto 26.5rem;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+.accordion {
+    max-width: 37.5rem;
+    width: 100%;
+    min-height: 35.5rem;
+    height: 100%;
+    background-color: var(--accordion-color);
+    border-radius: 1rem;
+    box-shadow: 0.2rem 0.2rem 4rem 0.2rem var(--shadow-color);
+    padding: 3rem 2.2rem 2rem;
+    margin: 1.5rem;
+}
+
+.accordion__title {
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+}
+
+.accordion__title img {
+    max-width: 2.5rem;
+    width: 100%;
+    height: auto;
+}
+
+.accordion__title h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+.accordion__item--title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 1.5rem 0;
+    border-bottom: 0.1rem solid var(--body-color);
+}
+
+.accordion__item:last-child .accordion__item--title {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.accordion__item.active .accordion__item--title {
+    border-bottom: none;
+}
+
+.accordion__item.active:last-child .accordion__item--title {
+    padding-bottom: 1.5rem;
+    border-bottom: none;
+}
+
+.accordion__item--title h2 {
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.accordion__item--title h2:hover {
+    color: var(--hover-color);
+}
+
+.icon__close, .icon__open {
+    min-width: 3rem;
+    height: auto;
+    padding-left: 1rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.accordion__item--content {
+    max-height: 0;
+    opacity: 0; 
+    padding: 0;
+    border-bottom: 0.1rem solid var(--body-color);
+    transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+}
+
+.accordion__item.active .accordion__item--content {
+    max-height: 100%;
+    opacity: 0.75; 
+    padding-bottom: 1.5rem;
+    border-bottom: 0.1rem solid #ddd7d7a5;
+}
