@@ -37,8 +37,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/responsive-section-with-faq-accordion-html-css-js-D2rBL3D6Ai)
+- Live Site URL: [Live site](https://grimm-n.github.io/faq-accordion/)
 
 ## My process
 
